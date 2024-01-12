@@ -1,6 +1,4 @@
-# Team-Eclipse-BarometerAPI
-
-# Axxes Busyness Barometer API
+# Axxes Busyness Barometer API - Team-Eclipse
 
 A restful API for the Axxes busyness barometer, providing real-time and predictive data about office busyness.
 
