@@ -30,8 +30,9 @@ The Axxes Busyness Barometer is designed to replace traditional desk reservation
 - ...
 
 ## Team J3​: 
-Team name: Eclipse
-Members:
+- Team name: Eclipse
+
+### Members:
 - Caro
 - Ingrid
 - Elias
