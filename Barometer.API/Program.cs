@@ -1,5 +1,11 @@
 
+using Barometer.BLL.MapperProfile;
+using Barometer.BLL.Services.Implementation;
+using Barometer.BLL.Services.Interface;
+using Barometer.DAL.Repositories.Implementation;
+using Barometer.DAL.Repositories.Interfaec;
 using Barometer.Data;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +14,14 @@ var builder = WebApplication.CreateBuilder(args);
 
 var connectionString = builder.Configuration.GetConnectionString("BarometerDbConnection");
 builder.Services.AddDbContext<BarometerContext>(options => options.UseSqlServer(connectionString));
+
+builder.Services.AddAutoMapper(typeof(Program));
+// In your DI configuration or a dedicated configuration class
+builder.Services.AddAutoMapper(typeof(BarometerMapperProfile));
+
+builder.Services.AddScoped<IBarometerRepository, BarometerRepository>();
+builder.Services.AddScoped<IBarometerService, BarometerService>();
+
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

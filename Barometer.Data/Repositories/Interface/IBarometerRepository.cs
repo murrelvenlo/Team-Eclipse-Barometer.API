@@ -9,5 +9,10 @@ namespace Barometer.DAL.Repositories.Interfaec
 {
     public interface IBarometerRepository
     {
+        Task<IEnumerable<BarometerModel>> GetAllBarometersAsync();
+        Task<BarometerModel> GetBarometerByIdAsync(int id);
+        Task<BarometerModel> CreateBarometerAsync(BarometerModel barometer);
+        Task<BarometerModel> UpdateBarometerAsync(BarometerModel barometer);
+        Task<bool> DeleteBarometerAsync(int id);
     }
 }
