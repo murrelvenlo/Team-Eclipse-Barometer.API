@@ -24,10 +24,19 @@ The Axxes Busyness Barometer is designed to replace traditional desk reservation
 
 ## API Documentation
 
+
 ### Endpoints
 
 - `GET /busyness`: Retrieve real-time busyness data.
 - `GET /predictions`: Retrieve predictive busyness data.
 - ...
 
-## Team: Eclipse
+## Team J3​: 
+Team name: Eclipse
+Members:
+- Caro
+- Ingrid
+- Elias
+- Lars
+- Murrel
+- Thomas
